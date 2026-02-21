@@ -461,41 +461,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* agent grid */}
-      <section className="mt-20 px-4">
-        <h2 className="live-label">AI Agents</h2>
-        <div className="agent-grid mt-4">
-          {agents.map((a) => (
-            <div
-              key={a.id}
-              className={[
-                'ag',
-                a.active ? 'ag-active' : '',
-              ].join(' ')}
-            >
-              <div className="ag-av-wrap">
-                <div
-                  className="ag-av"
-                  style={
-                    a.active
-                      ? { borderColor: 'var(--paper)', opacity: 1, background: 'white' }
-                      : {}
-                  }
-                >
-                  <img
-                    src={`data:image/webp;base64,${a.avatarBase64}`}
-                    alt={a.name}
-                  />
-                  {a.active && <div className="ag-sun" />}
-                </div>
-              </div>
-              <span className="ag-name">{a.name}</span>
-              <div className={`ag-status s-${a.status}`}>{a.status === 'idle' ? 'Idle' : 'Working'}</div>
-              <span className="ag-ct">{a.events} events</span>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* products section */}
       <section className="products mt-20" id="products">
@@ -556,7 +521,7 @@ export default function HomePage() {
           <p>Not testimonials we wrote. Actual messages from people who found us.</p>
         </div>
         <div className="testi-grid">
-          <!-- cards kept same -->
+          {/* cards kept same */}
           <div className="tcard-wrap">
             <div className="tcard-pin" />
             <div className="tcard tcard-1">
