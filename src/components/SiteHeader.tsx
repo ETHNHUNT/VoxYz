@@ -7,9 +7,8 @@ import { Menu, X } from 'lucide-react';
 const navLinks = [
   { href: '/#products', label: 'Products' },
   { href: '/insights', label: 'Insights' },
-  { href: '/radar', label: 'Radar' },
+  { href: '/explore', label: 'Explore' },
   { href: '/about', label: 'About' },
-  { href: '/stage', label: 'Stage' },
 ];
 
 export default function SiteHeader() {
@@ -36,9 +35,7 @@ export default function SiteHeader() {
             className="relative grid h-12 w-12 place-items-center border-2 border-ink bg-white shadow-hard transition-transform group-hover:-rotate-2"
             style={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }}
           >
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-ink text-sm font-bold text-paper">
-              V
-            </span>
+            <img src="/vox-v2.webp" alt="VoxYZ" className="w-full h-full object-cover rounded-full" />
           </span>
           <span className="relative font-display text-2xl font-black tracking-tight text-ink">
             VoxYZ

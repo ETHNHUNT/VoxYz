@@ -3,35 +3,57 @@ export type AgentStatus = 'idle' | 'working';
 export interface Agent {
   id: string;
   name: string;
-  avatarBase64: string;
+  avatarUrl: string;
   status: AgentStatus;
   events: number;
   active?: boolean;
+  crowned?: boolean;
 }
 
-// sample from homepage HTML; trimmed for brevity
+// updated to include full roster; images are served from /agents in public/
 export const agents: Agent[] = [
   {
     id: 'minion',
     name: 'Minion',
-    avatarBase64: '/9j/4AAQSkZJRgABAgAAAQABAAD/wAARCABwAHADACIAAREBAhEB... (truncated)',
+    avatarUrl: '/agents/minion.webp',
     status: 'idle',
     events: 40,
   },
   {
     id: 'sage',
     name: 'Sage',
-    avatarBase64: '/9j/4AAQSkZJRgABAgAAAQABAAD/wAARCABUAFQDACIAAREBAhEB... (truncated)',
+    avatarUrl: '/agents/sage.webp',
     status: 'idle',
     events: 48,
   },
   {
     id: 'scout',
     name: 'Scout',
-    avatarBase64: '/9j/4AAQSkZJRgABAgAAAQABAAD/wAARCABwAHADACIAAREBAhEB... (truncated)',
+    avatarUrl: '/agents/scout.webp',
     status: 'working',
     events: 31,
     active: true,
   },
-  // more agents could be added later
+  {
+    id: 'quill',
+    name: 'Quill',
+    avatarUrl: '/agents/quill.webp',
+    status: 'idle',
+    events: 35,
+  },
+  {
+    id: 'xalt',
+    name: 'Xalt',
+    avatarUrl: '/agents/xalt.webp',
+    status: 'idle',
+    events: 39,
+  },
+  {
+    id: 'observer',
+    name: 'Company Observer',
+    avatarUrl: '/agents/observer-optimised.webp',
+    status: 'idle',
+    events: 95,
+    crowned: true,
+  },
 ];
